@@ -1,0 +1,22 @@
+# Environment
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Course artefacts (downloaded or produced when you run the notebooks)
+data/
+runs/
+submissions/
+.mlquest_progress.json
+*.pt
+*.onnx
+*.ckpt
+*.safetensors
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+catboost_info/

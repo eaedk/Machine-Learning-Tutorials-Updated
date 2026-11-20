@@ -1,0 +1,75 @@
+[project]
+name = "machine-learning-tutorials-updated"
+version = "2.0.0"
+description = "Guided notebooks and competition-style applications to start and practice machine learning: tabular, time series, computer vision, NLP and audio."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+authors = [
+    { name = "Emmanuel KOUPOH (eaedk)" },
+    { name = "Muhamed Tuo (NazarioR9)" },
+    { name = "Cedric Manouan (dric2018)" },
+]
+# The "core" toolbox every notebook needs.
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "scikit-learn>=1.5",
+    "tqdm>=4.66",
+    "requests>=2.31",
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+    "ipywidgets>=8.1",
+]
+
+[dependency-groups]
+# Install only what you need:  uv sync --group tabular   (or --all-groups)
+tabular = [
+    "lightgbm>=4.3",
+    "xgboost>=2.0",
+    "catboost>=1.2.5",
+    "optuna>=3.6",
+    "imbalanced-learn>=0.12",
+    "shap>=0.45",
+]
+timeseries = [
+    "statsmodels>=0.14",
+    "lightgbm>=4.3",
+    "aeon>=1.0",
+    "torch>=2.3",
+    "chronos-forecasting>=1.5",
+]
+vision = [
+    "torch>=2.3",
+    "torchvision>=0.18",
+    "timm>=1.0",
+    "ultralytics>=8.3",
+    "segmentation-models-pytorch>=0.3.4",
+    "transformers>=4.44",
+    "av>=12",
+    "pillow>=10",
+]
+nlp = [
+    "torch>=2.3",
+    "transformers>=4.44",
+    "datasets>=2.20",
+    "accelerate>=0.33",
+    "sentence-transformers>=3.0",
+    "seqeval>=1.2.2",
+    "sentencepiece>=0.2",
+]
+audio = [
+    "torch>=2.3",
+    "transformers>=4.44",
+    "librosa>=0.10.2",
+    "soundfile>=0.12",
+]
+dev = [
+    "nbconvert>=7.16",
+    "nbformat>=5.10",
+]
+
+[tool.uv]
+package = false
